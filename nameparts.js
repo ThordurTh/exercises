@@ -1,4 +1,6 @@
-const fullName = "Albus Percival Wulfric Brian Dumbledore";
+///////// First exercise
+
+// const fullName = "Albus Percival Wulfric Brian Dumbledore";
 
 // const middleNameStart = fullName.indexOf(" ");
 // const middleNameEnd = fullName.lastIndexOf(" ");
@@ -11,13 +13,35 @@ const fullName = "Albus Percival Wulfric Brian Dumbledore";
 // const middleName = fullName.split(" ")[1];
 // const lastName = fullName.split(" ")[2];
 
-function getNameParts(fullName) {
-    const firstName = fullName.indexOf(" ");
-    const lastName = fullName.lastIndexOf(" ");
 
-    const middleName = fullName.substring(firstName+1, lastName);
+///////// Second exercise
 
-    console.log(middleName);
+// function getNameParts(fullName) {
+//     const firstName = fullName.indexOf(" ");
+//     const lastName = fullName.lastIndexOf(" ");
+
+//     const middleName = fullName.substring(firstName+1, lastName);
+
+//     console.log(middleName);
+// }
+
+// getNameParts("John Peter Frank Bob");
+
+
+///////// Third exercise
+
+function fullName(lastName, firstName, middleName) {
+    let fullname;
+
+    if (arguments.length == 2) {
+        fullname = `${firstName} ${lastName}`
+    } else {
+        fullname = `${firstName} ${middleName} ${lastName}`
+    }
+    console.log(fullname);
 }
 
-getNameParts("John Peter Frank Bob");
+fullName("Potter", "Harry", "James");
+fullName("Potter", "Harry");
+fullName("Harry", "Potter");
+fullName("Potter", "Harry", "James", "Pottypotpot");
